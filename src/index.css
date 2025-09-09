@@ -75,18 +75,6 @@
     --border: 214 32% 91%;
   }
 
-  .dark {
-    --background: 222 47% 4%;
-    --foreground: 213 31% 91%;
-
-    --card: 222 47% 8%;
-
-    --primary: 250 65% 65%;
-    --primary-foreground: 213 31% 91%;
-
-    --border: 217 33% 20%;
-  }
-
   * {
     @apply border-border;
   }
@@ -96,7 +84,8 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply text-foreground transition-colors duration-300;
+    background: linear-gradient(to right, #e0f7fa, #e8f5e9);
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

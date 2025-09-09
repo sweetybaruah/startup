@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# In your project .gitignore
+id_ed25519
+*.pem
+*.key
+
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

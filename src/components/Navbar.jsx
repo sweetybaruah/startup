@@ -3,9 +3,10 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { name: "Product", href: "#" },
-  { name: "Solution", href: "#" },
-  { name: "Learning System", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Pricing", href: "#" },
+  { name: "About", href: "#" },
+  { name: "Contact", href: "#" },
 ];
 
 export const Navbar = () => {
@@ -32,7 +33,7 @@ export const Navbar = () => {
           className="text-xl font-bold text-primary flex items-center"
           href="#"
         >
-          <img src="/spal_tbg.png" alt="Logo" className="h-8 mr-2"/>
+          {/* <img src="/spal_tbg.png" alt="Logo" className="h-8 mr-2"/> */}
           <span className="relative z-10">
             <span className="text-glow text-foreground"> SyntraPal </span>{" "}
           </span>

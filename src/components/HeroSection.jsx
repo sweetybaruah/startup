@@ -1,43 +1,33 @@
-import { ArrowDown } from "lucide-react";
+import analytica from "../assets/analytica.png";
 
 export const HeroSection = () => {
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex flex-col justify-center px-4"
-    >
-      <div className="container max-w-4xl mx-auto text-left z-10">
-        <div className="space-y-6">
+    <section id="hero" className="relative pt-28 pb-16">
+      <div className="container flex flex-col md:flex-row items-center gap-8">
+        {/* Left Column (Text) */}
+        <div className="md:w-1/2 text-left space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span> The</span>
-            <span className="text-primary">
-              {" "}
-              Analytics Drive
-            </span>
-            <span className="text-gradient ml-2">
-              {" "}
-              Software Solutions
-            </span>
+            <span>The</span>
+            <span className="text-primary"> Analytics Drive</span>
+            <span className="text-gradient"> Software Solutions</span>
           </h1>
 
-          {/* <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto">
-            I create stellar web experiences with modern technologies.
-            Specializing in front-end development, I build interfaces that are
-            both beautiful and functional.
-          </p> */}
-
           <div className="pt-4">
-            <a href="#projects" className="cosmic-button">
+            <a href="#contact" className="cosmic-button">
               Talk to our representative
             </a>
           </div>
         </div>
-      </div>
 
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
-        <ArrowDown className="h-5 w-5 text-primary" />
-      </div> */}
+        {/* Right Column (Image) */}
+        <div className="md:w-1/2">
+          <img
+            src={analytica}
+            alt="Analytics Illustration"
+            className="w-full h-auto"
+          />
+        </div>
+      </div>
     </section>
   );
 };

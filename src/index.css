@@ -85,7 +85,7 @@
 
   body {
     @apply text-foreground transition-colors duration-300;
-    background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+    background: linear-gradient(to right, #020024 0%, #5D6487 35%, #404187 100%);
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

@@ -8,7 +8,7 @@ export const HeroSection = () => {
         <div className="md:w-1/2 text-left space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             <span>The</span>
-            <span className="text-primary"> Analytics Drive</span>
+            <span className="text-primary"> Analytics Driven</span>
             <span className="text-gradient"> Software Solutions</span>
           </h1>
 

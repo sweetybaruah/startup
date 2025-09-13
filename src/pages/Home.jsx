@@ -9,7 +9,13 @@ import { Footer } from "../components/Footer";
 
 export const Home = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div
+      className="min-h-screen text-foreground overflow-x-hidden"
+      style={{
+        background:
+          "linear-gradient(to right, #020024 0%, #5D6487 35%, #404187 100%)",
+      }}
+    >
       {/* Background Effects */}
       <StarBackground />
 

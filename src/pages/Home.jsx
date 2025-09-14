@@ -1,30 +1,23 @@
 import { Navbar } from "../components/Navbar";
-import { StarBackground } from "@/components/StarBackground";
 import { HeroSection } from "../components/HeroSection";
-import { AboutSection } from "../components/AboutSection";
-import { SkillsSection } from "../components/SkillsSection";
-import { ProjectsSection } from "../components/ProjectsSection";
+import { AppsSection } from "../components/AppsSection";
+import { FeaturesSection } from "../components/FeaturesSection";
+import { TopFeaturesSection } from "../components/TopFeaturesSection";
+import { PricingSection } from "../components/PricingSection";
+import { BoostSection } from "../components/BoostSection";
+import { TestimonialSection } from "../components/TestimonialSection";
+import { FaqSection } from "../components/FaqSection";
+import { BlogSection } from "../components/BlogSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 
 export const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Background Effects */}
-      {/* <StarBackground /> */}
-
-      {/* Navbar */}
       <Navbar />
-      {/* Main Content */}
       <main>
-        <HeroSection />
-        <AboutSection />
-        {/* <SkillsSection /> */}
-        <ProjectsSection />
-        <ContactSection />
+        <h1>Hello World</h1>
       </main>
-
-      {/* Footer */}
       <Footer />
     </div>
   );

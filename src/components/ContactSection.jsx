@@ -1,16 +1,7 @@
-import {
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-  Twitch,
-  Twitter,
-} from "lucide-react";
-import { cn } from "@/lib/utils";
+import React from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -24,162 +15,105 @@ export const ContactSection = () => {
     setTimeout(() => {
       toast({
         title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        description: "Thank you for your message. We'll get back to you soon.",
       });
       setIsSubmitting(false);
     }, 1500);
   };
   return (
-    <section id="contact" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary"> Touch</span>
-        </h2>
-
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
-              {" "}
-              Contact Information
-            </h3>
-
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Email</h4>
-                  <a
-                    href="mailto:hello@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    hello@gmail.com
-                  </a>
-                </div>
+    <section className="section is-inverse">
+      <div className="container">
+        <div className="w-layout-grid grid_2-col gap-large">
+          <div className="w-form">
+            <form
+              id="wf-form-contact-form"
+              name="wf-form-Contact-Form"
+              data-name="Contact Form"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              <div className="input">
+                <label htmlFor="name-3" className="input_label">
+                  Name
+                </label>
+                <input
+                  className="input_field margin-bottom_xsmall on-inverse w-input"
+                  maxLength="256"
+                  name="name-3"
+                  data-name="Name 3"
+                  placeholder="Your name"
+                  type="text"
+                  id="name-3"
+                />
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Phone</h4>
-                  <a
-                    href="tel:+11234567890"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    +1 (123) 456-7890
-                  </a>
-                </div>
+              <div className="input">
+                <label htmlFor="email-5" className="input_label">
+                  Email
+                </label>
+                <input
+                  className="input_field margin-bottom_xsmall on-inverse w-input"
+                  maxLength="256"
+                  name="email-5"
+                  data-name="Email 5"
+                  placeholder="email@website.com"
+                  type="email"
+                  id="email-5"
+                  required=""
+                />
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
-                  </a>
-                </div>
+              <div className="input">
+                <label htmlFor="message-6" className="input_label">
+                  What’s on your mind?
+                </label>
+                <textarea
+                  id="message-6"
+                  name="message-6"
+                  maxLength="5000"
+                  data-name="Message 6"
+                  placeholder="Type your message..."
+                  className="input_field input_text-area margin-bottom_small on-inverse w-input"
+                ></textarea>
               </div>
+              <div className="button-group">
+                <input
+                  type="submit"
+                  data-wait="Please wait..."
+                  className="button on-inverse w-button"
+                  value={isSubmitting ? "Sending..." : "Submit"}
+                  disabled={isSubmitting}
+                />
+              </div>
+            </form>
+            <div className="form_success-message w-form-done">
+              <div>Thanks! We’ll reach out soon.</div>
             </div>
-
-            <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
-                  <Linkedin />
-                </a>
-                <a href="#" target="_blank">
-                  <Twitter />
-                </a>
-                <a href="#" target="_blank">
-                  <Instagram />
-                </a>
-                <a href="#" target="_blank">
-                  <Twitch />
-                </a>
+            <div className="form_error-message w-form-fail">
+              <div className="form_error-message_content">
+                <img
+                  width=""
+                  height=""
+                  alt="image of a contact center environment"
+                  src="https://cdn.prod.website-files.com/68c66ebd8e19fe35feb92824/68c670f6ac920cf61b2da6af_bc3f653a-6893-4edf-a9f9-926f5f0359f2.avif"
+                  loading="lazy"
+                  data-aisg-image-id="16cbd5d1-ce9a-4729-bddd-ee43cf5ad009"
+                  className="display_inline-block"
+                />
+                <div className="display_inline-block">
+                  Whoops! Double-check and try again.
+                </div>
               </div>
             </div>
           </div>
-
           <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
+            id="w-node-_04da3743-9ce2-6e2d-ee03-df10a8aa6687-6c55b82b"
+            className="w-node-c22a7dd6-4dda-421b-e09a-bf3f7036db9e-feb9283c"
           >
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
-
-            <form className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Pedro Machado..."
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
-                  placeholder="Hello, I'd like to talk about..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
-                )}
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-                <Send size={16} />
-              </button>
-            </form>
+            <h2 className="heading_h2">Let’s build something great</h2>
+            <p className="subheading">
+              Got a project or question? Reach out and let’s spark your next
+              big move. We’re here to help your business grow—no pressure, just
+              possibilities.
+            </p>
           </div>
         </div>
       </div>

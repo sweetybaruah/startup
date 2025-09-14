@@ -24,8 +24,8 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-md" : "py-5"
+        "fixed w-full z-40 transition-all duration-300 bg-white",
+        isScrolled ? "py-3 backdrop-blur-md shadow-md" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
@@ -70,7 +70,7 @@ export const Navbar = () => {
 
         <div
           className={cn(
-            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
+            "fixed inset-0 bg-white/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"

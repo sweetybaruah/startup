@@ -64,12 +64,12 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 219 39.4% 31%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
 
-    --primary: 145 50% 56.1%;
+    --primary: 219 39.4% 95%;
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
@@ -128,7 +128,7 @@
 }
 
 @utility cosmic-button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
+  @apply px-6 py-2 rounded-full bg-black text-primary-foreground font-medium
          transition-all duration-300 hover:shadow-[0_0_10px_rgba(87,199,133,100)]
          hover:scale-105 active:scale-95;
 }
